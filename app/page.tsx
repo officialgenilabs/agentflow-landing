@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { CtaBand } from "@/components/landing/CtaBand";
 import { FaqSection } from "@/components/landing/FaqSection";
 import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
@@ -13,15 +14,23 @@ import { ProofStrip } from "@/components/landing/ProofStrip";
 import { StickyCtaBar } from "@/components/landing/StickyCtaBar";
 import { WhatIsSection } from "@/components/landing/WhatIsSection";
 import { WhySection } from "@/components/landing/WhySection";
+import { getCurrencyConfig } from "@/lib/currency";
 
-export default function Home() {
+export default async function Home() {
+  const requestHeaders = await headers();
+  const country =
+    requestHeaders.get("x-vercel-ip-country") ??
+    requestHeaders.get("x-country") ??
+    "US";
+  const currency = getCurrencyConfig(country);
+
   return (
     <>
       <main>
         <HeroSection />
         <ProofStrip />
         <ProblemSection />
-        <LeadLeakCalculator />
+        <LeadLeakCalculator currency={currency} />
         <WhatIsSection />
         <InstallsSection />
         <CtaBand />

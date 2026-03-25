@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import type { CurrencyConfig } from "@/lib/currency";
 
 const presets = [
   {
@@ -44,12 +45,6 @@ type CalculatorState = {
 
 const defaultPreset = presets[1];
 
-const currencyFormatter = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  maximumFractionDigits: 0
-});
-
 const numberFormatter = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 1
 });
@@ -68,9 +63,22 @@ function applyPreset(preset: Preset): CalculatorState {
   };
 }
 
-export function LeadLeakCalculator() {
+export function LeadLeakCalculator({
+  currency
+}: {
+  currency: CurrencyConfig;
+}) {
   const [activePreset, setActivePreset] = useState<Preset["id"]>(defaultPreset.id);
   const [values, setValues] = useState<CalculatorState>(applyPreset(defaultPreset));
+  const currencyFormatter = useMemo(
+    () =>
+      new Intl.NumberFormat(currency.locale, {
+        style: "currency",
+        currency: currency.code,
+        maximumFractionDigits: 0
+      }),
+    [currency.code, currency.locale]
+  );
 
   const responsePenalty = clamp((values.responseDelay - 5) / 115, 0, 1) * 0.28;
   const followUpPenalty = clamp(values.missedFollowUp / 100, 0, 1) * 0.42;
@@ -98,7 +106,7 @@ export function LeadLeakCalculator() {
         value: `${pipelineProtected}%`
       }
     ],
-    [monthlyRevenueLeak, pipelineProtected]
+    [currencyFormatter, monthlyRevenueLeak, pipelineProtected]
   );
 
   function setField(field: keyof CalculatorState, value: number) {
@@ -126,6 +134,10 @@ export function LeadLeakCalculator() {
                 This sits inside the AgentFlow conversation on purpose. If the backend is slow,
                 scattered, or inconsistent, the leak is usually bigger than it feels day to day.
               </p>
+
+              <div className="mt-4 rounded-[1.4rem] border border-emerald-400/15 bg-emerald-400/10 px-4 py-3 text-sm text-white">
+                Showing calculator values in {currency.code} for visitors from {currency.country}.
+              </div>
 
               <div className="mt-7 flex flex-wrap gap-3">
                 {presets.map((preset) => (
