@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+.vercel/
+*.log
+.next-dev.err
+.next-dev.log
+.DS_Store
+Thumbs.db
