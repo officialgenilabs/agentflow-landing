@@ -3,17 +3,20 @@ import { SectionHeading } from "./SectionHeading";
 
 export function InstallsSection() {
   return (
-    <section className="section-pad">
+    <section id="what-gets-installed" className="section-pad pt-2">
       <div className="section-shell">
         <SectionHeading
-          eyebrow="What AgentFlow Installs"
-          title="The core systems that make the business easier to run."
-          description="Each piece is there to improve speed-to-lead, tighten follow-up, reduce admin drag, and give the team a cleaner operating rhythm."
+          eyebrow="What Gets Installed"
+          title="A more concrete operating system, not a vague promise."
+          description="AgentFlow is built around visible operational modules so buyers can understand exactly what gets installed and why it changes the day-to-day workflow."
         />
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {installItems.map((item, index) => (
-            <article key={item.title} className="panel group rounded-[1.75rem] p-6 transition hover:-translate-y-1 hover:border-emerald-300/20">
+            <article
+              key={item.title}
+              className="panel group rounded-[1.75rem] p-6 transition hover:-translate-y-1 hover:border-emerald-300/20"
+            >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-400/15 text-sm font-semibold text-emerald-200">
                 0{index + 1}
               </span>

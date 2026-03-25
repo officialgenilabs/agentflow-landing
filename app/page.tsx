@@ -1,5 +1,5 @@
 import { headers } from "next/headers";
-import { CtaBand } from "@/components/landing/CtaBand";
+import { ExampleWorkspaceSection } from "@/components/landing/ExampleWorkspaceSection";
 import { FaqSection } from "@/components/landing/FaqSection";
 import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
 import { Footer } from "@/components/landing/Footer";
@@ -9,11 +9,7 @@ import { InstallsSection } from "@/components/landing/InstallsSection";
 import { LeadLeakCalculator } from "@/components/landing/LeadLeakCalculator";
 import { ProblemSection } from "@/components/landing/ProblemSection";
 import { ProcessSection } from "@/components/landing/ProcessSection";
-import { ProofSection } from "@/components/landing/ProofSection";
-import { ProofStrip } from "@/components/landing/ProofStrip";
 import { StickyCtaBar } from "@/components/landing/StickyCtaBar";
-import { WhatIsSection } from "@/components/landing/WhatIsSection";
-import { WhySection } from "@/components/landing/WhySection";
 import { getCurrencyConfig } from "@/lib/currency";
 
 export default async function Home() {
@@ -28,16 +24,12 @@ export default async function Home() {
     <>
       <main>
         <HeroSection />
-        <ProofStrip />
         <ProblemSection />
-        <LeadLeakCalculator currency={currency} />
-        <WhatIsSection />
         <InstallsSection />
-        <CtaBand />
+        <ExampleWorkspaceSection />
         <InclusionSection />
         <ProcessSection />
-        <WhySection />
-        <ProofSection />
+        <LeadLeakCalculator currency={currency} />
         <FaqSection />
         <FinalCtaSection />
         <Footer />

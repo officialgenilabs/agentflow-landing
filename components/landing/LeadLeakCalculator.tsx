@@ -119,20 +119,19 @@ export function LeadLeakCalculator({
   }
 
   return (
-    <section className="section-pad pt-2">
+    <section className="section-pad">
       <div className="section-shell">
         <div className="lead-leak-shell overflow-hidden rounded-[2.25rem] border border-white/10">
           <div className="lead-leak-orb lead-leak-orb-left" />
           <div className="lead-leak-orb lead-leak-orb-right" />
           <div className="relative grid gap-8 px-5 py-6 md:px-8 md:py-8 xl:grid-cols-[0.82fr_1.18fr] xl:items-start">
             <div>
-              <span className="eyebrow">Lead Leak Calculator</span>
+              <span className="eyebrow">Calculator</span>
               <h2 className="mt-5 max-w-2xl text-4xl font-semibold tracking-tight text-white md:text-6xl">
-                Quantify the revenue your follow-up gaps are quietly leaking.
+                Estimate what weak follow-up and admin drag may be costing.
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-                This sits inside the AgentFlow conversation on purpose. If the backend is slow,
-                scattered, or inconsistent, the leak is usually bigger than it feels day to day.
+                This sits lower on the page on purpose. It is a supporting decision tool once the offer and example workspace already make sense.
               </p>
 
               <div className="mt-4 rounded-[1.4rem] border border-emerald-400/15 bg-emerald-400/10 px-4 py-3 text-sm text-white">
@@ -211,8 +210,7 @@ export function LeadLeakCalculator({
               </div>
 
               <p className="mt-5 max-w-2xl text-sm leading-6 text-slate-400">
-                Directional model only. It is designed to sharpen the conversation around missed
-                follow-up, slow response, and pipeline drag, not to act as a guarantee.
+                Directional model only. It is designed to sharpen the conversation around response speed, follow-up, and pipeline drag, not to promise results.
               </p>
             </div>
 
@@ -226,8 +224,7 @@ export function LeadLeakCalculator({
                     {currencyFormatter.format(annualRevenueLeak)}
                   </p>
                   <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 md:text-base">
-                    Based on your current lead volume, response speed, follow-up leakage, and close
-                    rate, this is the revenue AgentFlow is designed to help protect.
+                    Based on your current lead volume, response speed, follow-up leakage, and close rate, this is the revenue drag a tighter operating system is designed to help reduce.
                   </p>
 
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -277,7 +274,7 @@ export function LeadLeakCalculator({
                     <ResultCard
                       label="Deals leaking / year"
                       value={numberFormatter.format(annualDealsAtRisk)}
-                      detail="Modeled opportunities that stronger process could help recover."
+                      detail="Modeled opportunities that stronger process could help protect."
                     />
                     <ResultCard
                       label="Leak per day"
@@ -308,8 +305,7 @@ export function LeadLeakCalculator({
                       </div>
                     </div>
                     <p className="mt-4 text-sm leading-7 text-slate-300">
-                      Higher response speed and stronger follow-up discipline push more of the
-                      pipeline into the protected zone.
+                      Higher response speed and stronger follow-up discipline push more of the pipeline into the protected zone.
                     </p>
                   </div>
 
@@ -342,14 +338,13 @@ export function LeadLeakCalculator({
                     Natural next step
                   </p>
                   <p className="mt-3 max-w-2xl text-base leading-7 text-white">
-                    If this number feels uncomfortably plausible, run the fit check and we can map
-                    where AgentFlow tightens the follow-up system, pipeline, and listing ops.
+                    If this number feels uncomfortably plausible, move into the fit check and see whether AgentFlow is the right install for your current workflow.
                   </p>
                   <a
                     href="#fit-check"
                     className="mt-5 inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
                   >
-                    See How AgentFlow Fits
+                    Start Fit Check
                   </a>
                 </div>
               </div>

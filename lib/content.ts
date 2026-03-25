@@ -1,53 +1,62 @@
 export const hero = {
   eyebrow: "AgentFlow by Gen I Labs",
-  title: "THE REAL ESTATE BACKEND THAT HELPS YOU RESPOND FASTER AND CLOSE CLEANER.",
+  title: "THE REAL ESTATE OPERATING SYSTEM INSTALL FOR FASTER FOLLOW-UP, CLEANER PIPELINE CONTROL, AND LESS ADMIN DRAG.",
   description:
-    "AgentFlow is a premium Notion-first install for real estate agents and small teams who already have leads coming in but need faster follow-up, clearer pipeline control, tighter listing admin, and a business that feels more organized behind the scenes.",
-  primaryCta: "Start Your Fit Check",
-  secondaryCta: "See What Gets Installed",
-  tertiaryCta: "View 72-Hour Install Path",
+    "AgentFlow is a premium Notion-first install for solo real estate agents and small teams who already have enquiries coming in but need a cleaner backend to respond faster, track the right next steps, and run listings with less operational drag.",
+  primaryCta: "Start Fit Check",
+  secondaryCta: "See Example Workspace",
+  tertiaryCta: "View Install Path",
   trustPoints: [
-    "Built for real estate",
-    "Faster speed-to-lead",
-    "Cleaner follow-up discipline",
-    "Premium install, not bloated SaaS"
+    "Real-estate-specific",
+    "Notion-first",
+    "Install service, not SaaS",
+    "Built for qualified calls"
   ],
-  metrics: [
+  summaryCards: [
     {
-      label: "Best for",
-      value: "Agents and small teams with active enquiries, listings, and backend drag slowing response time"
+      label: "What you get",
+      value: "A premium Notion-first operating system install for lead handling, follow-up, listing admin, and daily pipeline control."
     },
     {
-      label: "Helps fix",
-      value: "Slow replies, inconsistent follow-up, weak pipeline visibility, and admin clutter"
+      label: "Who it is for",
+      value: "Solo agents and small teams with active enquiries who need more control behind the scenes."
     },
     {
-      label: "Next step",
-      value: "Take the guided fit check, share your workflow, then book a strategy call if the fit is strong"
+      label: "Starting from",
+      value: "R2999 / $179 for a focused install starting point."
+    },
+    {
+      label: "Delivery model",
+      value: "Tailored from a proven AgentFlow base template, then adjusted to the workflow you actually run."
     }
+  ],
+  focusList: [
+    "Respond faster to new enquiries.",
+    "Keep clean visibility on serious leads and next steps.",
+    "Reduce listing admin drag and backend clutter.",
+    "Move into a guided fit check before booking time."
   ]
 };
 
 export const proofStrip = [
   "Built specifically for real estate operations",
-  "Faster lead response without adding more chaos",
+  "Faster lead response without more chaos",
   "Cleaner pipeline visibility and ownership",
-  "Stronger follow-up discipline across the week",
-  "Less backend friction behind listings and deals"
+  "Less admin drag behind listings and deals"
 ];
 
 export const audienceCards = [
   {
     title: "Solo agents",
-    text: "For agents who are winning attention but still relying on memory, inboxes, and scattered notes to stay on top of leads."
+    text: "For agents who are lead-rich but still relying on memory, inboxes, and scattered notes to stay on top of follow-up."
   },
   {
     title: "Small teams",
-    text: "For teams that need clearer handoffs, tighter follow-up standards, and better visibility across active opportunities."
+    text: "For teams that need clearer ownership, tighter follow-up standards, and better visibility across active opportunities."
   },
   {
     title: "Operations support",
-    text: "For the person carrying listing admin, reminders, and coordination behind the scenes without a clean system to run it."
+    text: "For the person carrying reminders, listing admin, and coordination without a clean operating system behind them."
   }
 ];
 
@@ -55,27 +64,27 @@ export const chaosModes = [
   {
     id: "chaos",
     label: "The chaos tax",
-    headline: "The backend is often where good agents quietly lose momentum.",
+    headline: "Good agents often lose momentum in the backend before they lose it in the market.",
     description:
-      "When enquiries sit too long, follow-up depends on memory, and listing admin lives in too many places, opportunities slip and the client experience feels less premium than it should.",
+      "When follow-up depends on memory, pipeline visibility is weak, and listing admin lives everywhere, response quality drops and the whole business feels less premium than it should.",
     bullets: [
-      "Leads wait too long for a clean first response.",
-      "Follow-up drifts because the next move is not visible fast enough.",
+      "Leads wait too long for a confident first response.",
+      "Follow-up slips because the next step is not obvious enough.",
       "Pipeline visibility is too weak to catch stalled deals early.",
-      "Admin clutter makes the business feel reactive instead of controlled."
+      "Listing admin keeps pulling attention away from sales activity."
     ]
   },
   {
     id: "flow",
-    label: "The AgentFlow advantage",
-    headline: "A sharper operating system makes the whole business feel more premium.",
+    label: "The AgentFlow difference",
+    headline: "A cleaner operating rhythm makes the whole business easier to run.",
     description:
-      "AgentFlow gives your business a clear operating rhythm: visible priorities, cleaner stages, stronger follow-up discipline, structured listing tasks, and one place to run the moving parts with less friction.",
+      "AgentFlow gives your business one real operational view: visible priorities, cleaner follow-up, structured listing tasks, and a backend your team can actually use every day.",
     bullets: [
       "Faster replies with less hesitation.",
-      "Clear next steps on every serious lead.",
-      "Better visibility across active pipeline and admin.",
-      "A more credible premium experience behind the scenes."
+      "Clear next steps on serious leads.",
+      "Better visibility across pipeline and admin.",
+      "A more premium client experience behind the scenes."
     ]
   }
 ];
@@ -91,10 +100,10 @@ export const whatIsCards = [
   },
   {
     title: "Systems before extra automation",
-    text: "The first goal is a cleaner workflow that performs now. Extra automation only matters once the underlying structure is strong."
+    text: "The first goal is a cleaner workflow that performs now. Extra automation only matters once the structure is strong."
   },
   {
-    title: "Premium service install",
+    title: "Premium install service",
     text: "This is a guided install with scope, structure, templates, and operating standards, not another generic software login."
   }
 ];
@@ -102,10 +111,10 @@ export const whatIsCards = [
 export const workspaceTabs = [
   {
     id: "leads",
-    label: "Lead view",
+    label: "Lead board",
     kicker: "Fast follow-up",
     title: "See exactly who needs action next.",
-    text: "The workspace makes it obvious what came in, who owns it, what stage it is in, and which opportunities are going stale.",
+    text: "The workspace makes it obvious what came in, who owns it, what stage it is in, and which opportunities are most at risk of going cold.",
     bullets: [
       "Priority-based lead queue",
       "Clear next-step ownership",
@@ -116,8 +125,8 @@ export const workspaceTabs = [
     id: "listings",
     label: "Listing ops",
     kicker: "Cleaner admin",
-    title: "Tighten the backend around each listing.",
-    text: "Keep copy inputs, admin tasks, status updates, and supporting notes in one cleaner structure instead of chasing them across messages and tabs.",
+    title: "Keep listing work in one cleaner structure.",
+    text: "Track copy inputs, approvals, admin tasks, and supporting notes without chasing them across tabs and messages.",
     bullets: [
       "Listing prep and copy inputs",
       "Task tracking by stage",
@@ -129,10 +138,10 @@ export const workspaceTabs = [
     label: "Daily rhythm",
     kicker: "Operator clarity",
     title: "Install a repeatable operating rhythm.",
-    text: "AgentFlow creates a simple cadence for checking leads, moving deals, and keeping small details from slipping through the cracks.",
+    text: "Create a simple cadence for checking leads, moving deals, and keeping small details from slipping through the cracks.",
     bullets: [
       "Daily follow-up discipline",
-      "Cleaner team handoffs",
+      "Cleaner handoffs",
       "Better pipeline visibility"
     ]
   }
@@ -140,69 +149,117 @@ export const workspaceTabs = [
 
 export const installItems = [
   {
-    title: "Lead intake and pipeline setup",
-    text: "A cleaner place to track new enquiries, active opportunities, stage movement, and next actions without scattered tabs and messages."
+    title: "Lead pipeline board",
+    text: "A cleaner place to track incoming enquiries, active opportunities, stage movement, owners, and next actions without scattered tabs and messages."
   },
   {
-    title: "Task-driven follow-up workflow",
-    text: "Simple prompts, reminders, and ownership so serious leads do not cool off between conversations."
+    title: "Follow-up workflow",
+    text: "Task-driven follow-up prompts, reminders, and visibility so serious leads do not cool off between conversations."
   },
   {
-    title: "Listing operations structure",
-    text: "A tighter system for managing listing inputs, tasks, approvals, and admin flow."
+    title: "Listing operations system",
+    text: "A structured backend for listing inputs, copy support, status checks, approvals, and the admin work that usually gets messy."
   },
   {
-    title: "AI-assisted response support",
-    text: "Prompt tools for follow-up and listing copy inside the operating rhythm, where they are actually useful."
+    title: "AI-assisted writing support",
+    text: "Prompt-based support for follow-up and listing copy inside the workspace where it is actually useful, not bolted on as hype."
   },
   {
-    title: "Templates and operating scripts",
-    text: "Practical templates that reduce blank-page friction and make team communication more consistent."
+    title: "Templates and routines",
+    text: "Practical templates, scripts, and operating routines that reduce friction and help the business run more consistently day to day."
   },
   {
-    title: "Visibility and daily rhythm",
-    text: "A clear cadence for checking leads, moving deals, and keeping the backend under control."
+    title: "Tailored base install",
+    text: "A proven AgentFlow template adapted to the way you already work so the install feels faster to start and easier to adopt."
+  }
+];
+
+export const workspaceExamples = [
+  {
+    label: "Example workspace view",
+    title: "Lead command board",
+    description:
+      "A sample board showing new enquiries, ownership, priority, and the next action that keeps serious leads moving.",
+    whyItMatters:
+      "This matters because the team can see who needs attention now instead of relying on memory or inbox hunting.",
+    chips: ["New lead", "Priority", "Owner", "Next step"],
+    rows: [
+      ["Valuation request", "High", "Tebogo", "Call before 11:00"],
+      ["Buyer follow-up", "Medium", "Bokgabo", "Send options pack"],
+      ["Listing review", "High", "Owner", "Confirm photos"],
+      ["Offer check-in", "Low", "Agent", "Friday follow-up"]
+    ]
+  },
+  {
+    label: "Template example",
+    title: "Listing operations tracker",
+    description:
+      "A sample listing workflow for copy inputs, admin tasks, approvals, and launch readiness in one place.",
+    whyItMatters:
+      "This matters because listing admin stops interrupting sales work when every task and approval has a visible home.",
+    chips: ["Copy", "Admin", "Status", "Approval"],
+    rows: [
+      ["Family home - Bryanston", "Copy draft", "In progress", "Agent review"],
+      ["2-bed apartment", "Photo pack", "Waiting", "Seller"],
+      ["Rental listing", "Pricing notes", "Ready", "Approved"],
+      ["Sectional title", "Compliance docs", "Pending", "Ops"]
+    ]
+  },
+  {
+    label: "Sample daily view",
+    title: "Daily operating rhythm",
+    description:
+      "A sample dashboard view for priority tasks, overdue follow-up, and the daily rhythm that keeps the backend under control.",
+    whyItMatters:
+      "This matters because a simple daily rhythm protects response quality and stops the pipeline from becoming reactive.",
+    chips: ["Today", "Overdue", "Pipeline", "Admin"],
+    rows: [
+      ["First responses", "4 due", "Pipeline review", "16:00"],
+      ["Follow-up tasks", "7 active", "Stalled deals", "2 flagged"],
+      ["Listing admin", "3 open", "Approvals", "1 waiting"],
+      ["Copy requests", "2 queued", "Owner check", "Daily"]
+    ]
   }
 ];
 
 export const includedNow = [
-  "Tailored premium Notion workspace",
-  "Lead intake and pipeline structure",
+  "Tailored Notion-first AgentFlow workspace",
+  "Lead pipeline and next-step structure",
   "Task-driven follow-up workflow",
   "Listing operations and copy support",
-  "AI-assisted follow-up prompt generator",
+  "AI-assisted writing support inside the workflow",
   "Templates, scripts, and onboarding assets",
-  "72-hour build and review path"
+  "Guided build and review path"
 ];
 
 export const notIncluded = [
   "Native WhatsApp automation or sending",
   "Direct website lead capture integrations",
   "Full SaaS product positioning",
-  "Broad non-real-estate service business setup",
+  "Broad non-real-estate service setup",
   "Custom integrations unless explicitly scoped"
 ];
 
 export const processSteps = [
   {
     step: "01",
-    title: "Fit check",
-    text: "Answer a few lightweight questions so the page can route you into the right next step without dropping a full form on you too early."
+    title: "Start the fit check",
+    text: "Answer a few lightweight questions so the page can qualify whether AgentFlow fits your current workflow before you book time."
   },
   {
     step: "02",
-    title: "Intake and strategy call",
-    text: "If AgentFlow looks relevant, you complete the guided intake and choose a time to review your workflow."
+    title: "Share the core workflow",
+    text: "Complete the guided intake so we can understand your lead handling, follow-up rhythm, listing admin, and current operational drag."
   },
   {
     step: "03",
-    title: "Tailored build",
-    text: "Gen I Labs configures your workspace, structure, templates, and operating rhythm around the details you shared."
+    title: "Book the strategy call",
+    text: "Choose a slot to review fit, scope, and how the install would be tailored from the base AgentFlow template."
   },
   {
     step: "04",
-    title: "Review in about 72 hours",
-    text: "You review the install, we tighten the final details, and your team starts running a cleaner backend."
+    title: "Build and review",
+    text: "Gen I Labs builds the workspace, tightens the details with you, and moves the install toward a cleaner operating rhythm."
   }
 ];
 
@@ -223,16 +280,16 @@ export const reasons = [
 
 export const proofItems = [
   {
-    title: "Before",
-    text: "Leads scattered across messages, weak ownership, inconsistent follow-up, and listing admin that keeps interrupting real sales work."
+    title: "Template proof",
+    text: "The proof on this page is an example AgentFlow workspace that shows what the install can look like without pretending to be a live client result."
   },
   {
-    title: "After",
-    text: "One cleaner operating view for follow-up, pipeline movement, listing tasks, and the next actions that keep deals moving."
+    title: "Operational visibility",
+    text: "The goal is to make the product concrete: leads, tasks, listings, ownership, and the next steps that keep work moving."
   },
   {
     title: "Best fit",
-    text: "Agents and small teams who already have activity coming in but need structure, speed, and stronger day-to-day control."
+    text: "Agents and small teams who already have activity coming in and need more structure, speed, and day-to-day control."
   }
 ];
 
@@ -249,18 +306,18 @@ export const featuredStory = {
 export const conversionSteps = [
   {
     step: "01",
-    title: "Quick fit check",
-    text: "Three lightweight questions so the path feels guided, not abrupt."
+    title: "Fit check",
+    text: "Answer three quick questions so the CTA path feels guided instead of abrupt."
   },
   {
     step: "02",
-    title: "Share your workflow",
-    text: "Complete the embedded intake once the fit looks relevant."
+    title: "Guided intake",
+    text: "Share the workflow details that help us understand where AgentFlow should tighten the backend first."
   },
   {
     step: "03",
-    title: "Book the strategy call",
-    text: "Choose a strategy-call slot once intent is clear."
+    title: "Strategy call",
+    text: "Book your call once the fit is clear and the install path makes sense."
   }
 ];
 
@@ -350,17 +407,17 @@ export const conversionQuestions = [
 
 export const conversion = {
   eyebrow: "Guided conversion path",
-  title: "See if AgentFlow fits your business before you book time.",
+  title: "Check fit first, then move into the install conversation.",
   description:
-    "The CTA path is designed to feel low-friction: confirm fit first, share the key workflow details second, then book your strategy call if AgentFlow looks like the right move.",
-  primaryCta: "Start Your Fit Check",
-  secondaryCta: "Review install scope",
+    "The page is designed to qualify intent before booking time: confirm the fit, share the core workflow details, then move into a strategy call if AgentFlow looks like the right install.",
+  primaryCta: "Start Fit Check",
+  secondaryCta: "See Example Workspace",
   qualifiedTitle: "You look like a strong fit for AgentFlow.",
   qualifiedDescription:
-    "Complete the intake below so we can understand your current workflow, then move straight into booking your strategy call.",
+    "Complete the guided intake below so we can understand your current workflow, then move straight into booking your strategy call.",
   unqualifiedTitle: "Start with the lighter path first.",
   unqualifiedDescription:
-    "Based on your answers, the strongest next step is to review the scope first and request the overview before booking time.",
+    "Based on your answers, the strongest next step is to review the example workspace and overview before booking time.",
   intakeTitle: "Step 2: complete the guided intake",
   intakeDescription:
     "Keep the intake focused on your lead handling, follow-up rhythm, listing admin, and the specific operational bottlenecks you want cleaned up first.",
@@ -369,15 +426,15 @@ export const conversion = {
     "Once the intake is handled, secure a slot so we can review fit, scope, and what the install would look like inside your business.",
   formEmbedUrl: "https://tally.so/r/WOo5Yk",
   bookingUrl: "https://calendly.com/officialgenilabs/agentflowstrategy",
-  overviewHref: "mailto:hello@genilabs.co?subject=Send%20me%20the%20AgentFlow%20Overview",
+  overviewHref: "#example-workspace",
   bookingFallbackHref: "mailto:hello@genilabs.co?subject=AgentFlow%20Strategy%20Call"
 };
 
 export const faqItems = [
   {
-    question: "Is AgentFlow a full SaaS platform?",
+    question: "What exactly is AgentFlow?",
     answer:
-      "No. AgentFlow is a premium Notion-first operating system install for real estate agents and small teams."
+      "AgentFlow is a premium Notion-first real estate operating system install built for solo agents and small teams that need faster follow-up, cleaner pipeline control, and less admin drag."
   },
   {
     question: "Who is this best suited for?",
@@ -385,19 +442,24 @@ export const faqItems = [
       "The strongest fit is agents and small teams who already have enquiries, listings, or deal activity coming in and need a cleaner backend to run it."
   },
   {
-    question: "Does this include native WhatsApp automation or direct website integrations?",
+    question: "What does the install start from?",
     answer:
-      "No. Those are not default deliverables in this offer. The scope stays intentionally focused on the operating system itself."
+      "The page positions AgentFlow from R2999 / $179 as a focused starting point, then the exact scope depends on what needs to be tightened in your workflow."
+  },
+  {
+    question: "Is this a SaaS platform or software subscription?",
+    answer:
+      "No. AgentFlow is an install and service offer built inside a Notion-first operating system, not a full SaaS platform."
+  },
+  {
+    question: "Does this include WhatsApp automation or direct website integrations?",
+    answer:
+      "No. Those are not default deliverables in this offer. The scope stays intentionally focused on the operating system itself unless extra work is explicitly scoped."
   },
   {
     question: "What happens after the fit check?",
     answer:
       "If the flow looks relevant, you complete the intake, book the strategy call, and then Gen I Labs moves into the tailored build and review path."
-  },
-  {
-    question: "How quickly can this go live?",
-    answer:
-      "The install path is designed around a review in about 72 hours once the core inputs are shared."
   }
 ];
 
@@ -407,11 +469,11 @@ export const footerLinks = [
     href: "#fit-check"
   },
   {
-    label: "What Gets Installed",
-    href: "#what-agentflow-is"
+    label: "See Example Workspace",
+    href: "#example-workspace"
   },
   {
-    label: "Install Scope",
+    label: "Included Scope",
     href: "#included-scope"
   }
 ];

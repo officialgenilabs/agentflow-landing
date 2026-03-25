@@ -6,9 +6,9 @@ export function ProcessSection() {
     <section id="install-path" className="section-pad">
       <div className="section-shell">
         <SectionHeading
-          eyebrow="Conversion to Install"
-          title="A guided path from fit check to live system."
-          description="The experience is meant to feel premium and direct: qualify intent first, collect the right inputs, then move into a tailored build and review path."
+          eyebrow="Guided Process"
+          title="One clear path from fit check to install."
+          description="The process is designed to qualify intent first, gather the right inputs second, and only then move into the strategy call and build conversation."
         />
 
         <div className="mt-10 grid gap-4 lg:grid-cols-4">

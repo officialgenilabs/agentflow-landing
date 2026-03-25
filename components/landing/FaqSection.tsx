@@ -6,9 +6,9 @@ export function FaqSection() {
     <section className="section-pad">
       <div className="section-shell">
         <SectionHeading
-          eyebrow="Questions"
-          title="Clear the last objections before the CTA."
-          description="These are the questions most likely to slow the decision down. The goal is to make the next step feel clearer, not heavier."
+          eyebrow="FAQ"
+          title="Handle the last objections before the CTA."
+          description="These answers are here to make fit, scope, price entry, and offer clarity easier to evaluate before you start the guided path."
         />
 
         <div className="mt-10 grid gap-4">
