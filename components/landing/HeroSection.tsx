@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { audienceCards, featuredStory, hero } from "@/lib/content";
+import { hero } from "@/lib/content";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden pb-20 pt-6 md:pb-28">
+    <section className="relative overflow-hidden pb-20 pt-6 md:pb-24">
       <div className="ambient-orb ambient-orb-left" />
       <div className="ambient-orb ambient-orb-right" />
       <div className="grid-fade" />
@@ -21,16 +21,14 @@ export function HeroSection() {
               />
             </div>
             <div>
-              <p className="text-sm uppercase tracking-[0.28em] text-slate-400">
-                Gen I Labs
-              </p>
+              <p className="text-sm uppercase tracking-[0.28em] text-slate-400">Gen I Labs</p>
               <p className="text-sm text-slate-300">Premium real estate systems</p>
             </div>
           </div>
 
           <div className="hidden items-center gap-3 md:flex">
             <a
-              href="#what-agentflow-is"
+              href="#example-workspace"
               className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/10"
             >
               {hero.secondaryCta}
@@ -44,10 +42,10 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative mt-10 grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
+        <div className="relative mt-10 grid gap-10 lg:grid-cols-[0.98fr_1.02fr] lg:items-start">
           <div>
             <span className="eyebrow">{hero.eyebrow}</span>
-            <h1 className="hero-title mt-6 max-w-5xl text-5xl text-white md:text-7xl xl:text-[5.6rem]">
+            <h1 className="hero-title mt-6 max-w-5xl text-5xl text-white md:text-7xl xl:text-[5.35rem]">
               {hero.title}
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
@@ -62,7 +60,7 @@ export function HeroSection() {
                 {hero.primaryCta}
               </a>
               <a
-                href="#what-agentflow-is"
+                href="#example-workspace"
                 className="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-center text-sm font-semibold text-white transition hover:border-white/20 hover:bg-white/10"
               >
                 {hero.secondaryCta}
@@ -76,7 +74,7 @@ export function HeroSection() {
             </div>
 
             <p className="mt-4 text-sm text-slate-400">
-              Three quick questions. Guided intake. Then the strategy call.
+              Three quick questions. Guided intake. Strategy call only if the fit is there.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -89,29 +87,18 @@ export function HeroSection() {
                 </div>
               ))}
             </div>
-
-            <div className="mt-10 grid gap-4 md:grid-cols-3">
-              {audienceCards.map((item) => (
-                <article key={item.title} className="panel rounded-[1.5rem] px-5 py-5">
-                  <p className="text-xs uppercase tracking-[0.24em] text-emerald-200/70">
-                    {item.title}
-                  </p>
-                  <p className="mt-3 text-sm leading-6 text-slate-100">{item.text}</p>
-                </article>
-              ))}
-            </div>
           </div>
 
-          <div className="relative space-y-5">
+          <div className="space-y-5">
             <div className="panel spotlight-card rounded-[2rem] p-4 shadow-glow md:p-6">
               <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5 md:p-6">
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-sm uppercase tracking-[0.24em] text-emerald-200/70">
-                      Built to tighten the backend
+                      Offer summary
                     </p>
-                    <h2 className="mt-3 max-w-sm text-2xl font-semibold text-white md:text-3xl">
-                      A cleaner pipeline, sharper follow-up, and less admin drag around every lead.
+                    <h2 className="mt-3 max-w-lg text-2xl font-semibold text-white md:text-3xl">
+                      A premium install built to tighten the backend around every lead, listing, and next step.
                     </h2>
                   </div>
                   <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-2">
@@ -126,7 +113,7 @@ export function HeroSection() {
                 </div>
 
                 <div className="mt-8 grid gap-4 md:grid-cols-2">
-                  {hero.metrics.map((item) => (
+                  {hero.summaryCards.map((item) => (
                     <div
                       key={item.label}
                       className="rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4"
@@ -138,29 +125,20 @@ export function HeroSection() {
                     </div>
                   ))}
                 </div>
-
-                <div className="mt-6 rounded-[1.5rem] border border-emerald-400/15 bg-emerald-400/10 p-4">
-                  <p className="text-xs uppercase tracking-[0.24em] text-emerald-200/70">
-                    Outcome
-                  </p>
-                  <p className="mt-2 text-base leading-7 text-white">
-                    Replace reactive lead handling with a cleaner operating system your team can actually run every day.
-                  </p>
-                </div>
               </div>
             </div>
 
             <div className="panel rounded-[1.75rem] p-5">
               <p className="text-sm uppercase tracking-[0.24em] text-emerald-200/70">
-                {featuredStory.title}
+                What AgentFlow helps tighten
               </p>
               <div className="mt-4 grid gap-3">
-                {featuredStory.bullets.map((bullet) => (
+                {hero.focusList.map((item) => (
                   <div
-                    key={bullet}
+                    key={item}
                     className="rounded-[1rem] border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200"
                   >
-                    {bullet}
+                    {item}
                   </div>
                 ))}
               </div>

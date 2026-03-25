@@ -20,7 +20,7 @@ export function Footer() {
               AgentFlow by Gen I Labs
             </p>
             <p className="mt-2 text-sm text-slate-300">
-              Premium systems for real estate agents and small teams.
+              Premium Notion-first systems for real estate agents and small teams.
             </p>
           </div>
         </div>

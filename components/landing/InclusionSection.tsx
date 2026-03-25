@@ -21,7 +21,7 @@ function ScopeList({
               : "bg-white/5 text-slate-300"
           }`}
         >
-          {tone === "positive" ? "Included" : "Not default"}
+          {tone === "positive" ? "Included" : "Not included"}
         </span>
       </div>
       <div className="mt-6 space-y-3">
@@ -47,14 +47,14 @@ export function InclusionSection() {
     <section id="included-scope" className="section-pad">
       <div className="section-shell">
         <SectionHeading
-          eyebrow="Included Now vs Not Included"
-          title="Clear scope makes the buying decision feel cleaner."
-          description="AgentFlow stays intentionally focused so buyers can see exactly what gets installed, what does not, and why the offer feels lower-friction to act on."
+          eyebrow="Included vs Not Included"
+          title="Clear scope makes the buying decision easier."
+          description="AgentFlow stays intentionally focused so buyers can quickly understand what gets installed now, what does not, and where the offer begins."
         />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           <ScopeList title="Included now" items={includedNow} tone="positive" />
-          <ScopeList title="Not included" items={notIncluded} tone="neutral" />
+          <ScopeList title="Not included by default" items={notIncluded} tone="neutral" />
         </div>
       </div>
     </section>

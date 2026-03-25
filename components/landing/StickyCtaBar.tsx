@@ -10,7 +10,7 @@ export function StickyCtaBar() {
               AgentFlow fit path
             </p>
             <p className="mt-1 text-sm text-slate-200 md:text-base">
-              Start the fit check, then move into intake and booking.
+              Start the fit check, then move into intake and booking if the install fits.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -21,10 +21,10 @@ export function StickyCtaBar() {
               Start Fit Check
             </a>
             <a
-              href="#what-agentflow-is"
+              href="#example-workspace"
               className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/20 hover:bg-white/10"
             >
-              See What Gets Installed
+              See Example Workspace
             </a>
           </div>
         </div>
