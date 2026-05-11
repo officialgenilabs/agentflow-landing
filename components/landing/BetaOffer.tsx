@@ -10,7 +10,7 @@ export function BetaOffer() {
           <div className="bg-background p-6 md:p-12">
             <ScrollReveal>
               <div className="text-center">
-                <span className="inline-block rounded-full bg-purple-soft border border-purple/30 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-purple">
+                <span className="inline-block rounded-full bg-primary-soft border border-primary/30 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
                   {betaOffer.label}
                 </span>
 
@@ -28,8 +28,8 @@ export function BetaOffer() {
             <ScrollReveal>
               <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
                 {betaOffer.features.map((feature) => (
-                  <div key={feature} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
-                    <svg className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <div key={feature} className="flex items-start gap-3 rounded-xl border border-border bg-surface p-4">
+                    <svg className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                     <p className="text-sm text-white/90">{feature}</p>
@@ -46,11 +46,11 @@ export function BetaOffer() {
                     className={`rounded-2xl p-6 text-center transition hover:-translate-y-1 ${
                       tier.highlight
                         ? "pricing-highlight scale-105"
-                        : "border border-border bg-card opacity-60"
+                        : "border border-border bg-surface opacity-60"
                     }`}
                   >
                     {tier.badge && (
-                      <span className="inline-block rounded-full bg-purple/20 border border-purple/30 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-widest text-purple mb-4">
+                      <span className="inline-block rounded-full bg-primary/20 border border-primary/30 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-widest text-primary mb-4">
                         {tier.badge}
                       </span>
                     )}
@@ -69,7 +69,7 @@ export function BetaOffer() {
                     {tier.features.length > 0 && (
                       <div className="mt-4 space-y-2">
                         {tier.features.map((f) => (
-                          <p key={f} className="text-sm text-teal font-medium">{f}</p>
+                          <p key={f} className="text-sm text-secondary font-medium">{f}</p>
                         ))}
                       </div>
                     )}
@@ -80,8 +80,8 @@ export function BetaOffer() {
                         rel={tier.id === "enterprise" ? undefined : "noreferrer"}
                         className={`mt-6 inline-block rounded-full px-6 py-3 text-sm font-bold transition ${
                           tier.highlight
-                            ? "bg-purple text-white hover:bg-purple/90 cta-pulse"
-                            : "border border-border text-muted hover:text-white hover:border-purple/30"
+                            ? "bg-primary text-white hover:bg-primary/90 cta-pulse"
+                            : "border border-border text-muted hover:text-white hover:border-primary/30"
                         }`}
                       >
                         {tier.cta}
@@ -94,8 +94,8 @@ export function BetaOffer() {
 
             {/* Guarantee */}
             <ScrollReveal>
-              <div className="mt-10 rounded-2xl border border-teal/20 bg-teal-soft p-6 max-w-3xl mx-auto text-center">
-                <p className="text-xs font-bold uppercase tracking-widest text-teal mb-3">
+              <div className="mt-10 rounded-2xl border border-secondary/20 bg-secondary-soft p-6 max-w-3xl mx-auto text-center">
+                <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-3">
                   The 7-day guarantee
                 </p>
                 <p className="text-base text-white/90 leading-7">
@@ -111,7 +111,7 @@ export function BetaOffer() {
                   href={betaOffer.calendlyUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="cta-pulse inline-block rounded-full bg-purple px-10 py-4 text-lg font-bold text-white transition hover:bg-purple/90"
+                  className="cta-pulse inline-block rounded-full bg-primary px-10 py-4 text-lg font-bold text-white transition hover:bg-primary/90"
                 >
                   {betaOffer.ctaText}
                 </a>

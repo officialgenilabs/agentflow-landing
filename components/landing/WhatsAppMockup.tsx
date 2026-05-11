@@ -56,20 +56,20 @@ export function WhatsAppMockup() {
   return (
     <div className="w-full max-w-md mx-auto">
       {/* Phone frame */}
-      <div className="rounded-[2rem] border border-border bg-card overflow-hidden shadow-2xl shadow-purple/5">
+      <div className="rounded-[2rem] border border-border bg-surface overflow-hidden shadow-2xl shadow-primary/5">
         {/* Status bar */}
         <div className="flex items-center justify-between px-5 py-3 bg-background/60 border-b border-border">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple to-teal flex items-center justify-center text-xs font-bold text-white">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-xs font-bold text-white">
               K
             </div>
             <div>
               <p className="text-sm font-semibold text-white font-heading">Kai</p>
-              <p className="text-[0.65rem] text-teal">AgentFlow AI</p>
+              <p className="text-[0.65rem] text-secondary">AgentFlow AI</p>
             </div>
           </div>
           <div className="flex gap-1">
-            <span className="w-2 h-2 rounded-full bg-teal" />
+            <span className="w-2 h-2 rounded-full bg-secondary" />
             <span className="text-[0.65rem] text-muted">online</span>
           </div>
         </div>
@@ -83,7 +83,7 @@ export function WhatsAppMockup() {
               onClick={() => handleTabClick(i)}
               className={`flex-1 py-2.5 text-xs font-semibold transition-all ${
                 activeTab === i
-                  ? "text-purple border-b-2 border-purple bg-purple-soft"
+                  ? "text-primary border-b-2 border-primary bg-primary-soft shadow-[0_0_15px_rgba(11,255,153,0.3)]"
                   : "text-muted hover:text-white"
               }`}
             >
@@ -96,7 +96,7 @@ export function WhatsAppMockup() {
         </div>
 
         {/* Chat area */}
-        <div className="flex flex-col gap-3 p-4 min-h-[340px] bg-gradient-to-b from-background to-card/50">
+        <div className="flex flex-col gap-3 p-4 min-h-[340px] bg-gradient-to-b from-background to-surface/50">
           {currentMessages.slice(0, visibleCount).map((msg, i) => (
             <MessageBubble key={`${activeTab}-${i}`} message={msg} />
           ))}
@@ -131,7 +131,7 @@ function MessageBubble({ message }: { message: ChatMessage }) {
       )}
       <p className="text-white/90">{message.text}</p>
       {message.hasLink && (
-        <span className="inline-block mt-1.5 text-[0.75rem] text-teal underline underline-offset-2">
+        <span className="inline-block mt-1.5 text-[0.75rem] text-secondary underline underline-offset-2">
           📅 calendly.com/booking-link
         </span>
       )}

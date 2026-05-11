@@ -9,22 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0F",
-        card: "#12121A",
+        background: "#050508",
+        surface: "#0D0D14",
         border: "#1E1E2E",
-        purple: {
+        primary: {
           DEFAULT: "#6C63FF",
           soft: "rgba(108, 99, 255, 0.15)",
           glow: "rgba(108, 99, 255, 0.4)",
         },
-        teal: {
-          DEFAULT: "#00D4AA",
-          soft: "rgba(0, 212, 170, 0.15)",
-          glow: "rgba(0, 212, 170, 0.4)",
+        secondary: {
+          DEFAULT: "#0BFF99",
+          soft: "rgba(11, 255, 153, 0.15)",
+          glow: "rgba(11, 255, 153, 0.4)",
         },
         danger: {
-          DEFAULT: "#FF4D6D",
-          soft: "rgba(255, 77, 109, 0.15)",
+          DEFAULT: "#FF2A5F",
+          soft: "rgba(255, 42, 95, 0.15)",
         },
         muted: "#A0A0B8",
       },

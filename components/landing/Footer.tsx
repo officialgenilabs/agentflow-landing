@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="font-heading text-lg font-bold tracking-tight text-white">
             GEN{" "}
-            <span className="text-purple">I</span>{" "}
+            <span className="text-primary">I</span>{" "}
             LABS
           </span>
 
@@ -17,7 +17,7 @@ export function Footer() {
 
           <a
             href={`mailto:${footer.email}`}
-            className="text-sm text-muted hover:text-purple transition"
+            className="text-sm text-muted hover:text-primary transition"
           >
             {footer.email}
           </a>

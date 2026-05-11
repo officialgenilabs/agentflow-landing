@@ -27,13 +27,13 @@ export function Navbar() {
           {/* Wordmark */}
           <a href="#" className="font-heading text-lg font-bold tracking-tight text-white">
             GEN{" "}
-            <span className="text-purple">I</span>{" "}
+            <span className="text-primary">I</span>{" "}
             LABS
           </a>
 
           {/* Center badge – desktop */}
           <div className="hidden md:flex">
-            <span className="rounded-full border border-purple/30 bg-purple-soft px-4 py-1.5 text-sm font-medium text-purple font-heading">
+            <span className="rounded-full border border-primary/30 bg-primary-soft px-4 py-1.5 text-sm font-medium text-primary font-heading">
               {nav.badge}
             </span>
           </div>
@@ -44,7 +44,7 @@ export function Navbar() {
               href={nav.calendlyUrl}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-purple px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-purple/90 hover:shadow-lg hover:shadow-purple/25"
+              className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25"
             >
               {nav.ctaText}
             </a>
@@ -78,7 +78,7 @@ export function Navbar() {
         {/* Mobile menu */}
         {menuOpen && (
           <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl pb-6 pt-4 flex flex-col gap-4 items-center">
-            <span className="rounded-full border border-purple/30 bg-purple-soft px-4 py-1.5 text-sm font-medium text-purple font-heading">
+            <span className="rounded-full border border-primary/30 bg-primary-soft px-4 py-1.5 text-sm font-medium text-primary font-heading">
               {nav.badge}
             </span>
             <a
@@ -86,7 +86,7 @@ export function Navbar() {
               target="_blank"
               rel="noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="rounded-full bg-purple px-6 py-3 text-sm font-semibold text-white"
+              className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white"
             >
               {nav.ctaText}
             </a>

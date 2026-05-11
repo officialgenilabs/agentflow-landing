@@ -17,7 +17,7 @@ export function ProblemSection() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {problem.stats.map((stat, i) => (
             <ScrollReveal key={stat.description} delay={i + 1}>
-              <div className="glass-card p-8 text-center transition hover:border-purple/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple/5">
+              <div className="glass-card p-8 text-center transition hover:border-primary/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
                 <CountUpStat display={stat.display} suffix={stat.suffix} isLast={i === 2} />
                 <p className="mt-4 text-sm leading-6 text-muted">{stat.description}</p>
               </div>
@@ -91,9 +91,9 @@ function CountUpStat({
 
   return (
     <div ref={ref}>
-      <p className={`text-5xl font-bold tracking-tight md:text-6xl ${isLast ? "text-teal" : "text-white"}`}>
+      <p className={`text-5xl font-bold tracking-tight md:text-6xl ${isLast ? "text-secondary" : "text-white"}`}>
         {isRange ? (visible ? display : "0") : count}
-        <span className={`ml-1 text-2xl ${isLast ? "text-teal/70" : "text-muted"}`}>
+        <span className={`ml-1 text-2xl ${isLast ? "text-secondary/70" : "text-muted"}`}>
           {suffix}
         </span>
       </p>
