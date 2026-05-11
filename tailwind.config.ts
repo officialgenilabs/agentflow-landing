@@ -4,29 +4,37 @@ const config: Config = {
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
-    "./lib/**/*.{ts,tsx}"
+    "./lib/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "#050816",
-        surface: "#091125",
-        emerald: {
-          300: "#6ee7b7",
-          400: "#34d399",
-          500: "#10b981",
-          600: "#059669"
-        }
+        background: "#0A0A0F",
+        card: "#12121A",
+        border: "#1E1E2E",
+        purple: {
+          DEFAULT: "#6C63FF",
+          soft: "rgba(108, 99, 255, 0.15)",
+          glow: "rgba(108, 99, 255, 0.4)",
+        },
+        teal: {
+          DEFAULT: "#00D4AA",
+          soft: "rgba(0, 212, 170, 0.15)",
+          glow: "rgba(0, 212, 170, 0.4)",
+        },
+        danger: {
+          DEFAULT: "#FF4D6D",
+          soft: "rgba(255, 77, 109, 0.15)",
+        },
+        muted: "#A0A0B8",
       },
-      boxShadow: {
-        glow: "0 0 0 1px rgba(16, 185, 129, 0.16), 0 24px 80px rgba(16, 185, 129, 0.12)"
+      fontFamily: {
+        heading: ["var(--font-heading)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
       },
-      backgroundImage: {
-        "radial-emerald": "radial-gradient(circle at top, rgba(16, 185, 129, 0.22), transparent 32%)"
-      }
-    }
+    },
   },
-  plugins: []
+  plugins: [],
 };
 
 export default config;
