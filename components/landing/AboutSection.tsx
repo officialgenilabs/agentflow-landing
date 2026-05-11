@@ -10,7 +10,7 @@ export function AboutSection() {
             <div className="inline-flex items-center gap-2 mb-6">
               <span className="font-heading text-2xl font-bold text-white tracking-tight">
                 GEN{" "}
-                <span className="text-secondary">I</span>{" "}
+                <span className="text-primary">I</span>{" "}
                 LABS
               </span>
             </div>

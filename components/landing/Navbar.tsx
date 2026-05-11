@@ -27,7 +27,7 @@ export function Navbar() {
           {/* Wordmark */}
           <a href="#" className="font-heading text-lg font-bold tracking-tight text-white">
             GEN{" "}
-            <span className="text-secondary">I</span>{" "}
+            <span className="text-primary">I</span>{" "}
             LABS
           </a>
 

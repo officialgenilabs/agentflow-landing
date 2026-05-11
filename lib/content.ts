@@ -4,7 +4,7 @@ export const siteConfig = {
   product: "AgentFlow AI",
   url: "genilabs.co.za",
   email: "kaylyn@genilabs.co.za",
-  calendlyUrl: "https://calendly.com/officialgenilabs/agentflowstrategy",
+  calendlyUrl: "https://calendly.com/officialgenilabs/property-viewing-consultation",
 };
 
 /* ─── Navigation ─── */

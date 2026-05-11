@@ -91,9 +91,9 @@ function CountUpStat({
 
   return (
     <div ref={ref}>
-      <p className={`text-5xl font-bold tracking-tight md:text-6xl ${isLast ? "text-secondary" : "text-white"}`}>
+      <p className={`text-5xl font-bold tracking-tight md:text-6xl ${isLast ? "text-primary" : "text-white"}`}>
         {isRange ? (visible ? display : "0") : count}
-        <span className={`ml-1 text-2xl ${isLast ? "text-secondary/70" : "text-muted"}`}>
+        <span className={`ml-1 text-2xl ${isLast ? "text-primary/70" : "text-muted"}`}>
           {suffix}
         </span>
       </p>
