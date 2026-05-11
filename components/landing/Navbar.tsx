@@ -27,7 +27,7 @@ export function Navbar() {
           {/* Wordmark */}
           <a href="#" className="font-heading text-lg font-bold tracking-tight text-white">
             GEN{" "}
-            <span className="text-primary">I</span>{" "}
+            <span className="text-secondary">I</span>{" "}
             LABS
           </a>
 
@@ -44,7 +44,7 @@ export function Navbar() {
               href={nav.calendlyUrl}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25"
+              className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-background transition hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25"
             >
               {nav.ctaText}
             </a>
@@ -86,7 +86,7 @@ export function Navbar() {
               target="_blank"
               rel="noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white"
+              className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-background"
             >
               {nav.ctaText}
             </a>

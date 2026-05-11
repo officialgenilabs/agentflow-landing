@@ -37,18 +37,18 @@ export function HeroSection() {
                 href={hero.calendlyUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="cta-pulse rounded-full bg-primary px-7 py-3.5 text-center text-sm font-bold text-white transition hover:bg-primary/90"
+                className="cta-pulse rounded-full bg-primary px-7 py-3.5 text-center text-sm font-bold text-background transition hover:bg-primary/90"
               >
                 {hero.primaryCta}{" "}
-                <span className="ml-1 rounded-full bg-white/20 px-2 py-0.5 text-xs">
+                <span className="ml-1 rounded-full bg-black/10 px-2 py-0.5 text-xs">
                   {hero.primaryCtaNote}
                 </span>
               </a>
               <a
                 href="#how-it-works"
-                className="flex items-center justify-center gap-2 rounded-full border border-border bg-surface px-6 py-3.5 text-sm font-semibold text-white transition hover:border-primary/30 hover:bg-primary-soft"
+                className="flex items-center justify-center gap-2 rounded-full border border-border bg-surface px-6 py-3.5 text-sm font-semibold text-white transition hover:border-secondary/30 hover:bg-secondary-soft"
               >
-                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                 </svg>
                 {hero.secondaryCta}
@@ -59,7 +59,7 @@ export function HeroSection() {
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
               {hero.trustIndicators.map((item) => (
                 <span key={item} className="flex items-center gap-2 text-sm text-muted">
-                  <svg className="w-4 h-4 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   {item}

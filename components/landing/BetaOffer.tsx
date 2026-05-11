@@ -29,7 +29,7 @@ export function BetaOffer() {
               <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
                 {betaOffer.features.map((feature) => (
                   <div key={feature} className="flex items-start gap-3 rounded-xl border border-border bg-surface p-4">
-                    <svg className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                     <p className="text-sm text-white/90">{feature}</p>
@@ -80,7 +80,7 @@ export function BetaOffer() {
                         rel={tier.id === "enterprise" ? undefined : "noreferrer"}
                         className={`mt-6 inline-block rounded-full px-6 py-3 text-sm font-bold transition ${
                           tier.highlight
-                            ? "bg-primary text-white hover:bg-primary/90 cta-pulse"
+                            ? "bg-primary text-background hover:bg-primary/90 cta-pulse"
                             : "border border-border text-muted hover:text-white hover:border-primary/30"
                         }`}
                       >
@@ -94,7 +94,7 @@ export function BetaOffer() {
 
             {/* Guarantee */}
             <ScrollReveal>
-              <div className="mt-10 rounded-2xl border border-secondary/20 bg-secondary-soft p-6 max-w-3xl mx-auto text-center">
+              <div className="mt-10 rounded-2xl border border-primary/20 bg-primary-soft p-6 max-w-3xl mx-auto text-center">
                 <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-3">
                   The 7-day guarantee
                 </p>
@@ -111,7 +111,7 @@ export function BetaOffer() {
                   href={betaOffer.calendlyUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="cta-pulse inline-block rounded-full bg-primary px-10 py-4 text-lg font-bold text-white transition hover:bg-primary/90"
+                  className="cta-pulse inline-block rounded-full bg-primary px-10 py-4 text-lg font-bold text-background transition hover:bg-primary/90"
                 >
                   {betaOffer.ctaText}
                 </a>

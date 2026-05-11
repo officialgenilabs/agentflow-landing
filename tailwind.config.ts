@@ -13,14 +13,14 @@ const config: Config = {
         surface: "#0D0D14",
         border: "#1E1E2E",
         primary: {
-          DEFAULT: "#6C63FF",
-          soft: "rgba(108, 99, 255, 0.15)",
-          glow: "rgba(108, 99, 255, 0.4)",
-        },
-        secondary: {
           DEFAULT: "#0BFF99",
           soft: "rgba(11, 255, 153, 0.15)",
           glow: "rgba(11, 255, 153, 0.4)",
+        },
+        secondary: {
+          DEFAULT: "#6C63FF",
+          soft: "rgba(108, 99, 255, 0.15)",
+          glow: "rgba(108, 99, 255, 0.4)",
         },
         danger: {
           DEFAULT: "#FF2A5F",

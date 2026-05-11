@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="font-heading text-lg font-bold tracking-tight text-white">
             GEN{" "}
-            <span className="text-primary">I</span>{" "}
+            <span className="text-secondary">I</span>{" "}
             LABS
           </span>
 
