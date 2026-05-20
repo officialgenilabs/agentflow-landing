@@ -9,24 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#050508",
-        surface: "#0D0D14",
-        border: "#1E1E2E",
+        background: "#0A0A0A",
+        surface: "#121214",
+        border: "#1C1C22",
         primary: {
-          DEFAULT: "#0BFF99",
-          soft: "rgba(11, 255, 153, 0.15)",
-          glow: "rgba(11, 255, 153, 0.4)",
+          DEFAULT: "#00E599",
+          soft: "rgba(0, 229, 153, 0.12)",
+          glow: "rgba(0, 229, 153, 0.35)",
         },
         secondary: {
           DEFAULT: "#6C63FF",
-          soft: "rgba(108, 99, 255, 0.15)",
-          glow: "rgba(108, 99, 255, 0.4)",
+          soft: "rgba(108, 99, 255, 0.12)",
+          glow: "rgba(108, 99, 255, 0.35)",
         },
         danger: {
           DEFAULT: "#FF2A5F",
-          soft: "rgba(255, 42, 95, 0.15)",
+          soft: "rgba(255, 42, 95, 0.12)",
         },
-        muted: "#A0A0B8",
+        muted: "#9E9EAF",
       },
       fontFamily: {
         heading: ["var(--font-heading)", "sans-serif"],

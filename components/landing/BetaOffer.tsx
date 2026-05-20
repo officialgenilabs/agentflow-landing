@@ -78,9 +78,9 @@ export function BetaOffer() {
                         href={tier.id === "enterprise" ? `mailto:${siteConfig.email}` : siteConfig.calendlyUrl}
                         target={tier.id === "enterprise" ? undefined : "_blank"}
                         rel={tier.id === "enterprise" ? undefined : "noreferrer"}
-                        className={`mt-6 inline-block rounded-full px-6 py-3 text-sm font-bold transition ${
+                        className={`mt-6 inline-block rounded-full px-6 py-3 text-xs font-extrabold uppercase tracking-widest transition ${
                           tier.highlight
-                            ? "bg-primary text-background hover:bg-primary/90 cta-pulse"
+                            ? "bg-primary text-[#0A0A0A] hover:bg-white cta-pulse"
                             : "border border-border text-muted hover:text-white hover:border-primary/30"
                         }`}
                       >
@@ -95,10 +95,10 @@ export function BetaOffer() {
             {/* Guarantee */}
             <ScrollReveal>
               <div className="mt-10 rounded-2xl border border-primary/20 bg-primary-soft p-6 max-w-3xl mx-auto text-center">
-                <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-3">
-                  The 7-day guarantee
+                <p className="text-[0.65rem] font-bold uppercase tracking-widest text-secondary mb-3">
+                  The 7-day operational guarantee
                 </p>
-                <p className="text-base text-white/90 leading-7">
+                <p className="text-sm text-white/90 leading-7 font-medium">
                   {betaOffer.guarantee}
                 </p>
               </div>
@@ -106,12 +106,12 @@ export function BetaOffer() {
 
             {/* Main CTA */}
             <ScrollReveal>
-              <div className="mt-10 text-center">
+              <div className="mt-12 text-center">
                 <a
                   href={betaOffer.calendlyUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="cta-pulse inline-block rounded-full bg-primary px-10 py-4 text-lg font-bold text-background transition hover:bg-primary/90"
+                  className="cta-pulse inline-block rounded-full bg-primary px-10 py-4.5 text-xs font-extrabold uppercase tracking-widest text-[#0A0A0A] transition hover:bg-white"
                 >
                   {betaOffer.ctaText}
                 </a>
