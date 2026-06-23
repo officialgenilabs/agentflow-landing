@@ -16,15 +16,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AgentFlow AI — AI WhatsApp Sales Agent for SA Real Estate | Gen I Labs",
+  title: "Gen I Labs — AI Business Infrastructure for Lead Operations",
   description:
-    "AgentFlow AI responds to every WhatsApp enquiry and Property24 lead email in under 60 seconds — qualifying, matching listings, and booking viewings automatically.",
+    "Gen I Labs builds AI-powered business infrastructure. AgentFlow AI helps real estate teams seal lead leaks with governed capture, routing, approvals, and audit-ready follow-up.",
   openGraph: {
-    title: "AgentFlow AI — Your AI Sales Agent for Real Estate",
+    title: "Gen I Labs — Seal the leaks. Protect the pipeline.",
     description:
-      "Respond to every lead in 47 seconds. Qualify, match, and book viewings automatically.",
+      "AgentFlow AI is the lead operations layer for real estate teams that need every lead captured, qualified, routed, governed, and moved forward.",
     type: "website",
     locale: "en_ZA",
+    url: "https://www.genilabs.co.za",
+    siteName: "Gen I Labs",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gen I Labs — Seal the leaks. Protect the pipeline.",
+    description:
+      "AI-powered business infrastructure and AgentFlow AI, the lead operations layer for real estate teams.",
   },
 };
 
