@@ -1,3 +1,6 @@
+const AUDIT_BOOKING_URL = "https://calendly.com/officialgenilabs/agentflowstrategy";
+const APP_LOGIN_URL = "https://app.genilabs.co.za";
+
 const navItems = [
   { label: "AgentFlow AI", href: "#agentflow-preview" },
   { label: "How it works", href: "#infrastructure-flow" },
@@ -41,7 +44,7 @@ const proofSteps = [
   ["Activation proof", "A founding real estate deployment is being activated privately."],
   ["Operational proof", "Lead capture and routing evidence will be shared only when validated."],
   ["Outcome proof", "Viewing or revenue outcomes require measured evidence."],
-  ["Public proof", "Names, quotes, logos, and case studies require permission."],
+  ["Public proof", "Public evidence is shared only after validation and explicit approval."],
 ];
 
 const auditItems = [
@@ -132,7 +135,7 @@ function CtaStrip() {
           <p className="mt-2 text-sm text-white/65">Map the lead leaks before adding more tools or traffic.</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button href="#lead-leak-audit">Book a Lead Leak Audit</Button>
+          <Button href={AUDIT_BOOKING_URL}>Book a Lead Leak Audit</Button>
           <Button href="#agentflow-preview" variant="ghost">See AgentFlow AI</Button>
         </div>
       </div>
@@ -168,10 +171,10 @@ export default function Home() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a href="https://app.genilabs.co.za" className="hidden text-xs font-semibold uppercase tracking-[0.18em] text-white/45 transition hover:text-white sm:inline-flex">
+            <a href={APP_LOGIN_URL} className="hidden text-xs font-semibold uppercase tracking-[0.18em] text-white/45 transition hover:text-white sm:inline-flex">
               Access App
             </a>
-            <Button href="#lead-leak-audit">Book Audit</Button>
+            <Button href={AUDIT_BOOKING_URL}>Book Audit</Button>
           </div>
         </div>
       </header>
@@ -190,11 +193,11 @@ export default function Home() {
               A CRM stores leads. AgentFlow governs what happens after the lead arrives.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href="#lead-leak-audit">Book a Lead Leak Audit</Button>
+              <Button href={AUDIT_BOOKING_URL}>Book a Lead Leak Audit</Button>
               <Button href="#agentflow-preview" variant="secondary">See AgentFlow AI</Button>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Pill tone="neutral">Production app live</Pill>
+              <Pill tone="neutral">Production app exists</Pill>
               <Pill tone="neutral">Human approval by design</Pill>
               <Pill tone="neutral">Audit-ready operations</Pill>
             </div>
@@ -295,7 +298,7 @@ export default function Home() {
             <SectionHeader
               eyebrow="Proof without theatre"
               title="Production truth first. Public proof only when it is earned."
-              body="Gen I Labs will not manufacture traction claims. Public proof moves through a clear ladder: production product truth, private activation, validated operations, measured outcomes, and only then approved public case studies."
+              body="Gen I Labs will not manufacture traction claims. Public proof moves through a clear ladder: production product truth, private activation, validated operations, measured outcomes, and only then approved public evidence."
             />
             <div className="mt-12 grid gap-4">
               {proofSteps.map(([title, body], index) => (
@@ -336,7 +339,7 @@ export default function Home() {
                     <p className="mt-6 text-base leading-8 text-text-secondary">Map where your real estate leads enter, where handoffs become unclear, where follow-up stalls, and whether AgentFlow AI is the right infrastructure layer for your team.</p>
                     <p className="mt-5 text-sm leading-7 text-white/55">Founding agency deployments are open. Implementation pricing depends on team size, channels, workflow complexity, and support needs.</p>
                     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                      <Button href="#lead-leak-audit">Book a Lead Leak Audit</Button>
+                      <Button href={AUDIT_BOOKING_URL}>Book a Lead Leak Audit</Button>
                       <Button href="#agentflow-preview" variant="secondary">See AgentFlow AI</Button>
                     </div>
                   </div>
@@ -356,7 +359,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold tracking-[-0.05em] text-white md:text-6xl">Ready to see where your pipeline is leaking?</h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-text-secondary">Start with the audit. If AgentFlow is a fit, Gen I Labs will map the operating layer your team needs next.</p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <Button href="#lead-leak-audit">Book a Lead Leak Audit</Button>
+              <Button href={AUDIT_BOOKING_URL}>Book a Lead Leak Audit</Button>
               <Button href="#agentflow-preview" variant="secondary">See AgentFlow AI</Button>
             </div>
           </div>
@@ -371,10 +374,8 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap gap-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
             <a href="#agentflow-preview" className="hover:text-white">AgentFlow AI</a>
-            <a href="#lead-leak-audit" className="hover:text-white">Lead Leak Audit</a>
-            <a href="/privacy" className="hover:text-white">Privacy</a>
-            <a href="/terms" className="hover:text-white">Terms</a>
-            <a href="https://app.genilabs.co.za" className="hover:text-white">App Login</a>
+            <a href={AUDIT_BOOKING_URL} className="hover:text-white">Lead Leak Audit</a>
+            <a href={APP_LOGIN_URL} className="hover:text-white">App Login</a>
           </div>
         </div>
       </footer>
