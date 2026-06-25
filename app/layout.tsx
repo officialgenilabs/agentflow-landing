@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { AnalyticsEvents } from "./analytics-events";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -43,7 +45,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <AnalyticsEvents />
+        <Script
+          src="https://analytics.genilabs.co.za/script.js"
+          data-website-id="eaeb8e56-3d8d-45db-abe5-2ddae8051ff4"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }

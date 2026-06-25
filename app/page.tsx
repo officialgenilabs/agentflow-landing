@@ -56,7 +56,17 @@ const auditItems = [
   "Deployment readiness",
 ];
 
-function Button({ href, children, variant = "primary" }: { href: string; children: React.ReactNode; variant?: "primary" | "secondary" | "ghost" }) {
+function Button({
+  href,
+  children,
+  variant = "primary",
+  umamiEvent,
+}: {
+  href: string;
+  children: React.ReactNode;
+  variant?: "primary" | "secondary" | "ghost";
+  umamiEvent?: string;
+}) {
   const styles = {
     primary: "bg-primary text-black shadow-[0_0_32px_rgba(11,255,153,0.26)] hover:bg-primary/90",
     secondary: "border border-secondary/35 bg-secondary-soft text-white hover:border-secondary/60 hover:bg-secondary/20",
@@ -64,7 +74,11 @@ function Button({ href, children, variant = "primary" }: { href: string; childre
   };
 
   return (
-    <a href={href} className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-bold transition ${styles[variant]}`}>
+    <a
+      href={href}
+      data-umami-event={umamiEvent}
+      className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-bold transition ${styles[variant]}`}
+    >
       {children}
     </a>
   );
@@ -136,7 +150,7 @@ function CtaStrip() {
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button href={AUDIT_BOOKING_URL}>Book a Lead Leak Audit</Button>
-          <Button href="#agentflow-preview" variant="ghost">See AgentFlow AI</Button>
+          <Button href="#agentflow-preview" variant="ghost" umamiEvent="cta_click_see_agentflow">See AgentFlow AI</Button>
         </div>
       </div>
     </div>
@@ -171,10 +185,10 @@ export default function Home() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a href={APP_LOGIN_URL} className="hidden text-xs font-semibold uppercase tracking-[0.18em] text-white/45 transition hover:text-white sm:inline-flex">
+            <a href={APP_LOGIN_URL} data-umami-event="outbound_click_app_login" className="hidden text-xs font-semibold uppercase tracking-[0.18em] text-white/45 transition hover:text-white sm:inline-flex">
               Access App
             </a>
-            <Button href={AUDIT_BOOKING_URL}>Book Audit</Button>
+            <Button href={AUDIT_BOOKING_URL} umamiEvent="cta_click_lead_leak_audit_nav">Book Audit</Button>
           </div>
         </div>
       </header>
@@ -193,8 +207,8 @@ export default function Home() {
               A CRM stores leads. AgentFlow governs what happens after the lead arrives.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href={AUDIT_BOOKING_URL}>Book a Lead Leak Audit</Button>
-              <Button href="#agentflow-preview" variant="secondary">See AgentFlow AI</Button>
+              <Button href={AUDIT_BOOKING_URL} umamiEvent="cta_click_lead_leak_audit_hero">Book a Lead Leak Audit</Button>
+              <Button href="#agentflow-preview" variant="secondary" umamiEvent="cta_click_see_agentflow">See AgentFlow AI</Button>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Pill tone="neutral">Production app exists</Pill>
@@ -340,7 +354,7 @@ export default function Home() {
                     <p className="mt-5 text-sm leading-7 text-white/55">Founding agency deployments are open. Implementation pricing depends on team size, channels, workflow complexity, and support needs.</p>
                     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                       <Button href={AUDIT_BOOKING_URL}>Book a Lead Leak Audit</Button>
-                      <Button href="#agentflow-preview" variant="secondary">See AgentFlow AI</Button>
+                      <Button href="#agentflow-preview" variant="secondary" umamiEvent="cta_click_see_agentflow">See AgentFlow AI</Button>
                     </div>
                   </div>
                   <div className="grid gap-3">
@@ -359,8 +373,8 @@ export default function Home() {
             <h2 className="text-4xl font-bold tracking-[-0.05em] text-white md:text-6xl">Ready to see where your pipeline is leaking?</h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-text-secondary">Start with the audit. If AgentFlow is a fit, Gen I Labs will map the operating layer your team needs next.</p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <Button href={AUDIT_BOOKING_URL}>Book a Lead Leak Audit</Button>
-              <Button href="#agentflow-preview" variant="secondary">See AgentFlow AI</Button>
+              <Button href={AUDIT_BOOKING_URL} umamiEvent="cta_click_lead_leak_audit_final">Book a Lead Leak Audit</Button>
+              <Button href="#agentflow-preview" variant="secondary" umamiEvent="cta_click_see_agentflow">See AgentFlow AI</Button>
             </div>
           </div>
         </section>
@@ -375,7 +389,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
             <a href="#agentflow-preview" className="hover:text-white">AgentFlow AI</a>
             <a href={AUDIT_BOOKING_URL} className="hover:text-white">Lead Leak Audit</a>
-            <a href={APP_LOGIN_URL} className="hover:text-white">App Login</a>
+            <a href={APP_LOGIN_URL} data-umami-event="outbound_click_app_login" className="hover:text-white">App Login</a>
           </div>
         </div>
       </footer>
