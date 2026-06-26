@@ -10,7 +10,7 @@
 - Public links stay clean and human-postable.
 - Long UTM attribution lives behind temporary website redirects.
 - Redirects stay temporary `307` via Next.js `permanent: false`.
-- Calendly remains the primary public booking destination until founder explicitly approves Cal.com migration.
+- Cal.com is now the approved primary public booking destination. Calendly remains an internal fallback for 7 days after migration.
 - Do not put names, emails, phone numbers, private lead details, Zoom links, credentials, or private company data in UTM values.
 
 ## Standard UTM Vocabulary
@@ -68,7 +68,7 @@ Use lowercase snake_case values that describe the asset/message, for example:
 | `/leak` | Lead Leak Audit general campaign | `/?utm_source=shortlink&utm_medium=direct&utm_campaign=lead_leak_audit&utm_content=leak_shortlink` | Patch prepared; deploy required |
 | `/dm` | LinkedIn DM / outbound conversation traffic | `/?utm_source=linkedin_dm&utm_medium=dm&utm_campaign=lead_leak_audit&utm_content=real_estate_owner_v1` | Patch prepared; deploy required |
 | `/agentflow` | Product interest / AgentFlow preview | `/?utm_source=shortlink&utm_medium=direct&utm_campaign=agentflow_launch&utm_content=agentflow_shortlink#agentflow-preview` | Patch prepared; deploy required |
-| `/audit` | Direct booking intent | `https://calendly.com/officialgenilabs/agentflowstrategy?utm_source=shortlink&utm_medium=direct&utm_campaign=lead_leak_audit&utm_content=audit_shortlink` | Patch prepared; deploy required |
+| `/audit` | Direct booking intent | `https://calendar.genilabs.co.za/genilabs/lead-leak-audit?utm_source=shortlink&utm_medium=direct&utm_campaign=lead_leak_audit&utm_content=audit_shortlink` | Cal migration patch prepared/deployed after validation |
 | `/story` | Instagram story traffic | `/?utm_source=instagram_story&utm_medium=story&utm_campaign=weekend_content&utm_content=instagram_story_01` | New; deploy required |
 | `/partner` | Partner/referral conversations | `/?utm_source=partner&utm_medium=referral&utm_campaign=partner_outreach&utm_content=partner_faith_v1` | New; deploy required |
 | `/ai` | ChatGPT / AI referral experiment | `/?utm_source=chatgpt&utm_medium=ai_referral&utm_campaign=website_qualification_agent&utm_content=website_qualifier_teaser_01` | New; deploy required |
@@ -82,7 +82,7 @@ Safe after approved deployment:
 - `https://www.genilabs.co.za/ig` — Instagram bio.
 - `https://www.genilabs.co.za/story` — Instagram story.
 - `https://www.genilabs.co.za/dm` — LinkedIn DM / outbound conversations.
-- `https://www.genilabs.co.za/audit` — direct booking intent; Calendly remains the target.
+- `https://www.genilabs.co.za/audit` — direct booking intent; Cal is now the target.
 
 Do not use yet until deployment is approved and live validation passes:
 
@@ -99,9 +99,10 @@ For same-site redirects (`/leak`, `/ig`, `/story`, `/agentflow`, `/launch`, `/dm
 
 For `/audit`:
 
-- The redirect exits directly to Calendly.
+- The redirect exits directly to the self-hosted Cal Lead Leak Audit page.
 - Umami on the Gen I Labs website may not record a landing pageview for `/audit` because no Gen I Labs page loads before redirect.
-- Calendly may receive the UTM query parameters. Treat `/audit` as direct booking-intent routing, not as a full onsite behavior trail.
+- Cal receives the UTM query parameters. Treat `/audit` as direct booking-intent routing, not as a full onsite behavior trail.
+- Calendly fallback is retained internally for 7 days after migration: `https://calendly.com/officialgenilabs/agentflowstrategy`.
 
 ## Source of Truth
 

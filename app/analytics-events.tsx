@@ -39,7 +39,10 @@ export function AnalyticsEvents() {
 
       if (!link) return;
 
-      if (link.href.startsWith("https://calendly.com/officialgenilabs/agentflowstrategy")) {
+      if (
+        link.href.startsWith("https://calendar.genilabs.co.za/genilabs/lead-leak-audit") ||
+        link.href.startsWith("https://calendly.com/officialgenilabs/agentflowstrategy")
+      ) {
         trackEvent("outbound_click_calendly");
       }
     };

@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const AUDIT_BOOKING_URL = "https://calendly.com/officialgenilabs/agentflowstrategy";
+const AUDIT_BOOKING_URL = "https://calendar.genilabs.co.za/genilabs/lead-leak-audit";
 
 const nextConfig: NextConfig = {
   async redirects() {

@@ -1,4 +1,5 @@
-const AUDIT_BOOKING_URL = "https://calendly.com/officialgenilabs/agentflowstrategy";
+const AUDIT_BOOKING_BASE_URL = "https://calendar.genilabs.co.za/genilabs/lead-leak-audit";
+const AUDIT_BOOKING_URL = `${AUDIT_BOOKING_BASE_URL}?utm_source=genilabs_site&utm_medium=website_cta&utm_campaign=lead_leak_audit&utm_content=primary_booking_cta`;
 const APP_LOGIN_URL = "https://app.genilabs.co.za";
 
 const navItems = [
