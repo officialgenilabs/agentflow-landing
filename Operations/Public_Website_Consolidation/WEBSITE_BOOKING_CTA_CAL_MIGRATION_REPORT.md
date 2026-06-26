@@ -1,8 +1,8 @@
 # Website Booking CTA Cal Migration Report
 
-**Status:** patch prepared; validation/deployment evidence to be appended.  
-**Production website:** https://www.genilabs.co.za  
-**Previous booking destination:** https://calendly.com/officialgenilabs/agentflowstrategy  
+**Status:** patch prepared; validation/deployment evidence to be appended.
+**Production website:** https://www.genilabs.co.za
+**Previous booking destination:** https://calendly.com/officialgenilabs/agentflowstrategy
 **New booking destination:** https://calendar.genilabs.co.za/genilabs/lead-leak-audit
 
 ## 1. Scope
@@ -117,3 +117,76 @@ Executed before production deployment:
 | DNS changes | PASS: no DNS changes made |
 
 Deployment approval condition from founder prompt is satisfied: changes are booking URL/redirect-related, validation passed, `/leak` remains unchanged in the redirect manifest, `/audit` points to Cal, the Cal booking page loads, and no other systems were touched.
+
+## 12. Production Deployment Results
+
+**Deployment timestamp:** 2026-06-26 14:10 UTC
+**Deployment commit:** `2db1811` (`Migrate website booking CTA to Cal`)
+**Production URL:** https://www.genilabs.co.za
+**Vercel deployment URL:** https://agentflow-landing-kggvtiwdb-officialgenilabs-projects.vercel.app
+
+Production deployment completed successfully and was aliased to `https://www.genilabs.co.za`.
+
+## 13. Post-Deploy Live Validation
+
+| Check | Result |
+| --- | --- |
+| Homepage loads | PASS: `200` |
+| Primary booking CTA points to Cal | PASS: live homepage contains Cal Lead Leak Audit URL |
+| Public Calendly CTA removed | PASS: live homepage no longer contains the Calendly URL |
+| `/audit` redirect | PASS: `307` to Cal Lead Leak Audit page with UTM params |
+| `/leak` redirect | PASS: `307`, unchanged campaign/education path |
+| `/agentflow` redirect | PASS: `307`, hash destination preserved |
+| `/ig` | PASS: `307` |
+| `/story` | PASS: `307` |
+| `/dm` | PASS: `307` |
+| `/partner` | PASS: `307` |
+| `/ai` | PASS: `307` |
+| `/wa` | PASS: `307` |
+| Cal booking page | PASS: `200` |
+| Umami script | PASS: present on live homepage |
+| AgentFlow app login | PASS: `https://app.genilabs.co.za` redirects to `/login`, then returns `200` |
+| Layout break smoke | PASS: homepage HTML loads expected core markers |
+
+## 14. Live Shortlink Results
+
+| Shortlink | Live status | Destination |
+| --- | --- | --- |
+| `/launch` | `307` | `/?utm_source=linkedin&utm_medium=organic&utm_campaign=agentflow_launch&utm_content=founder_post_01` |
+| `/ig` | `307` | `/?utm_source=instagram&utm_medium=bio&utm_campaign=weekend_content&utm_content=instagram_bio` |
+| `/leak` | `307` | `/?utm_source=shortlink&utm_medium=direct&utm_campaign=lead_leak_audit&utm_content=leak_shortlink` |
+| `/dm` | `307` | `/?utm_source=linkedin_dm&utm_medium=dm&utm_campaign=lead_leak_audit&utm_content=real_estate_owner_v1` |
+| `/agentflow` | `307` | `/?utm_source=shortlink&utm_medium=direct&utm_campaign=agentflow_launch&utm_content=agentflow_shortlink#agentflow-preview` |
+| `/audit` | `307` | `https://calendar.genilabs.co.za/genilabs/lead-leak-audit?utm_source=shortlink&utm_medium=direct&utm_campaign=lead_leak_audit&utm_content=audit_shortlink` |
+| `/story` | `307` | `/?utm_source=instagram_story&utm_medium=story&utm_campaign=weekend_content&utm_content=instagram_story_01` |
+| `/partner` | `307` | `/?utm_source=partner&utm_medium=referral&utm_campaign=partner_outreach&utm_content=partner_faith_v1` |
+| `/ai` | `307` | `/?utm_source=chatgpt&utm_medium=ai_referral&utm_campaign=website_qualification_agent&utm_content=website_qualifier_teaser_01` |
+| `/wa` | `307` | `/?utm_source=whatsapp&utm_medium=direct&utm_campaign=lead_leak_audit&utm_content=whatsapp_direct_01` |
+
+## 15. Umami Tracking Result
+
+A controlled booking CTA test event was sent to Umami after deployment and verified in the Umami database.
+
+| Field | Value |
+| --- | --- |
+| `created_at` | `2026-06-26 14:11:58.142+00` |
+| `hostname` | `www.genilabs.co.za` |
+| `utm_source` | `genilabs_site` |
+| `utm_medium` | `website_cta` |
+| `utm_campaign` | `lead_leak_audit` |
+| `utm_content` | `primary_booking_cta` |
+| `event_name` | `outbound_click_calendly` |
+
+Tracking result: PASS.
+
+Note: event name remains `outbound_click_calendly` for dashboard continuity even though the destination is now Cal. Recommend renaming to a neutral booking event later only after founder approval.
+
+## 16. Deployment Status
+
+Cal public CTA migration is deployed and live.
+
+Rollback required: no.
+
+## 17. Next Recommended Action
+
+Founder should manually narrow/manage Cal availability windows while direct calendar conflict sync is not active. Use `/audit` and the public website CTAs for Cal booking, while keeping Calendly as an internal fallback for 7 days.

@@ -1,8 +1,8 @@
 # Cal Public CTA Migration Readiness
 
-**Status:** production deployment approved if validation passes.  
-**Website:** https://www.genilabs.co.za  
-**Cal booking page:** https://calendar.genilabs.co.za/genilabs/lead-leak-audit  
+**Status:** production deployment approved if validation passes.
+**Website:** https://www.genilabs.co.za
+**Cal booking page:** https://calendar.genilabs.co.za/genilabs/lead-leak-audit
 **Previous primary booking destination:** https://calendly.com/officialgenilabs/agentflowstrategy
 
 ## Scope
@@ -80,3 +80,16 @@ Recommended later cleanup: after the launch window, rename or add a neutral even
 ## Readiness Decision
 
 Ready to deploy if validation passes and the production patch remains limited to booking URL/redirect tracking changes.
+
+## Deployment Outcome — 2026-06-26
+
+Deployment completed successfully.
+
+- Deployment commit: `2db1811` (`Migrate website booking CTA to Cal`)
+- Production URL: `https://www.genilabs.co.za`
+- Primary website booking CTA: Cal Lead Leak Audit page
+- `/audit`: `307` to Cal Lead Leak Audit page
+- Cal page: `200`
+- `/leak`: still `307` to the unchanged Lead Leak Audit campaign/education path
+- Calendly fallback: retained internally for 7 days
+- Manual availability rule: still active until direct calendar conflict sync is solved
