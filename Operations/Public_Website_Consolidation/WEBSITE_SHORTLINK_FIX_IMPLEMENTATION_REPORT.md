@@ -108,3 +108,27 @@ Executed locally on 2026-06-26 after the redirect patch:
 | Production live recheck | Still `404` for `/launch`, `/ig`, `/leak`, `/dm`, `/agentflow`, `/audit`, `/story`, `/partner`, `/ai`, `/wa` because deployment has not been performed |
 
 Production deployment is still required and must not happen without founder approval.
+
+## Production Deployment Update — 2026-06-26 13:10 UTC
+
+Founder approved production deployment of the validated redirect/config patch.
+
+| Field | Value |
+| --- | --- |
+| Deployment commit | `6c62658` (`Fix website shortlink UTM redirects`) |
+| Production URL | `https://www.genilabs.co.za` |
+| Vercel deployment URL | `https://agentflow-landing-byo3mwspk-officialgenilabs-projects.vercel.app` |
+| Production deploy status | Completed |
+| Rollback required | No |
+
+Post-deploy validation passed:
+
+- `/launch`, `/ig`, `/leak`, `/dm`, `/agentflow`, `/audit`, `/story`, `/partner`, `/ai`, and `/wa` all return temporary `307` redirects.
+- `/leak` now redirects to the homepage with `utm_source=shortlink`, `utm_medium=direct`, `utm_campaign=lead_leak_audit`, and `utm_content=leak_shortlink`.
+- `/audit` still redirects to the approved Calendly booking URL; no Cal.com migration occurred.
+- Homepage remains healthy with `200` response.
+- App Login URL remains present and `https://app.genilabs.co.za` reaches `/login` successfully.
+- Umami script remains present in live homepage HTML.
+- A controlled `/leak` test hit was received by Umami with the expected UTM fields.
+
+Detailed deployment evidence is recorded in `Operations/Public_Website_Consolidation/WEBSITE_SHORTLINK_PRODUCTION_DEPLOYMENT_REPORT.md`.
