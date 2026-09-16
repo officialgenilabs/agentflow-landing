@@ -1,0 +1,226 @@
+.gateShell,
+.shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(108, 99, 255, 0.22), transparent 34rem),
+    radial-gradient(circle at 15% 30%, rgba(11, 255, 153, 0.10), transparent 28rem),
+    #050508;
+  color: #fff;
+}
+
+.gateShell {
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.gateCard {
+  width: min(100%, 32rem);
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  border: 1px solid #24243a;
+  border-radius: 1.5rem;
+  background: rgba(13, 13, 20, 0.92);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(11, 255, 153, 0.3);
+  border-radius: 999px;
+  color: #0bff99;
+  background: rgba(11, 255, 153, 0.08);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gateCard h1,
+.hero h1 {
+  margin: 1.15rem 0 0.75rem;
+  font-size: clamp(2rem, 7vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.gateCard h1 { font-size: clamp(2rem, 7vw, 3rem); }
+
+.gateCard > p,
+.lead {
+  color: #a0a0b8;
+  line-height: 1.7;
+}
+
+.gateForm {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.gateForm label {
+  color: #d7d7e5;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.gateForm input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #34344d;
+  border-radius: 0.75rem;
+  background: #08080e;
+  color: #fff;
+  font: inherit;
+  outline: none;
+}
+
+.gateForm input:focus {
+  border-color: #0bff99;
+  box-shadow: 0 0 0 3px rgba(11, 255, 153, 0.12);
+}
+
+.gateForm button,
+.logoutButton {
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  background: #0bff99;
+  color: #04130d;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.gateNote {
+  margin: 1rem 0 0;
+  font-size: 0.78rem;
+}
+
+.errorText {
+  margin: 0;
+  color: #ff7698;
+  font-size: 0.84rem;
+}
+
+.shell {
+  padding: clamp(2rem, 6vw, 5rem) 1rem 3rem;
+}
+
+.hero,
+.voiceCard,
+.disclosures,
+.footerActions {
+  width: min(100%, 68rem);
+  margin-inline: auto;
+}
+
+.hero { text-align: center; }
+
+.lead {
+  max-width: 42rem;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.25rem;
+  color: #c8c8d8;
+  font-size: 0.85rem;
+}
+
+.statusDot,
+.statusError {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #0bff99;
+  box-shadow: 0 0 18px rgba(11, 255, 153, 0.9);
+}
+
+.statusError {
+  background: #ff2a5f;
+  box-shadow: 0 0 18px rgba(255, 42, 95, 0.7);
+}
+
+.voiceCard {
+  margin-top: 2.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(11, 255, 153, 0.24);
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, rgba(11, 255, 153, 0.06), rgba(108, 99, 255, 0.08));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.voiceContainer {
+  min-height: 19rem;
+  display: grid;
+  place-items: center;
+  color: #a0a0b8;
+}
+
+.voiceContainer :global(.dograh-inline-container) {
+  color: #fff;
+}
+
+.voiceContainer :global(.dograh-inline-btn-start) {
+  color: #04130d !important;
+}
+
+.disclosures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.disclosures article {
+  padding: 1.25rem;
+  border: 1px solid #222234;
+  border-radius: 1rem;
+  background: rgba(13, 13, 20, 0.78);
+}
+
+.disclosures h2 {
+  margin: 0 0 0.55rem;
+  font-size: 1rem;
+}
+
+.disclosures p {
+  margin: 0;
+  color: #a0a0b8;
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.footerActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.backLink,
+.logoutButton {
+  font-size: 0.82rem;
+}
+
+.backLink { color: #a0a0b8; }
+.logoutButton { background: #1b1b28; color: #d7d7e5; }
+
+@media (max-width: 760px) {
+  .shell { padding-top: 2.5rem; }
+  .disclosures { grid-template-columns: 1fr; }
+  .voiceContainer { min-height: 17rem; }
+  .footerActions { align-items: stretch; flex-direction: column; }
+  .logoutButton { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gateForm button,
+  .logoutButton { transition: none; }
+}
